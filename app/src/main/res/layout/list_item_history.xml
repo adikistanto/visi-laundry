@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPutih"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+    <TextView
+        android:id="@+id/nama_paket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Nama paket"/>
+    <ImageView
+        android:id="@+id/image_batal"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/nama_paket"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_cancel_black_24dp"/>
+    <TableLayout
+        android:id="@+id/detail"
+        android:layout_below="@+id/nama_paket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="harga"/>
+            <TextView
+                android:id="@+id/harga_paket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="harga"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jumlah"/>
+            <TextView
+                android:id="@+id/jumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="jumlah"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="harga total"/>
+            <TextView
+                android:id="@+id/total_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="harga total"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waktu pesan"/>
+            <TextView
+                android:id="@+id/waktu_pesan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tgl. pesan"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

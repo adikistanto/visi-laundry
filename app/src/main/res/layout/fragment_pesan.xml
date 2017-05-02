@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="300dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.digitcreativestudio.visilaundry.MainActivity"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@color/colorPutih"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_main">
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pesan_quantity_text"/>
+
+    <biz.kasual.materialnumberpicker.MaterialNumberPicker
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:npMinValue="1"
+        app:npMaxValue="10"
+        app:npDefaultValue="1"
+        app:npBackgroundColor="@color/colorPutih"
+        app:npSeparatorColor="@color/colorPrimary"
+        app:npTextColor="@color/colorHitam"
+        app:npTextSize="17sp"/>
+
+    <RelativeLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+
+            android:layout_alignParentLeft="true"
+            android:id="@+id/button_batal"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/batal_text"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorPutih"/>
+        <Button
+            android:layout_alignParentRight="true"
+            android:id="@+id/button_pesan"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pesan_text"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorPutih"/>
+    </RelativeLayout>
+</LinearLayout>
