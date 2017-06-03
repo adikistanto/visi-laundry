@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,6 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onResponse(String response) {
                         dialog.dismiss();
+                        Log.v("login respon",response);
                         try {
                             parseJSON(response);
                         }catch (JSONException e){
@@ -119,9 +121,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         int success = jObject.getInt(Constant.TAG_SUCCESS);
         if(success==1) {
-            JSONArray produks = jObject.getJSONArray(Constant.TAG_USER);
+            JSONObject data = jObject.getJSONObject(Constant.TAG_USER);
 
-            JSONObject data = (JSONObject) produks.get(0);
             String id_pengguna = data.getString(Constant.TAG_ID_PENGGUNA);
             String nama_lengkap = data.getString(Constant.TAG_NAMA_LENGKAP);
             String username = data.getString(Constant.TAG_USERNAME);

@@ -115,16 +115,20 @@ public class HistoryActivity extends AppCompatActivity {
                 JSONObject data = (JSONObject) produks.get(i);
                 int id_pesan = data.getInt(Constant.TAG_ID_PESAN);
                 String nama_paket = data.getString(Constant.TAG_NAMA_PAKET);
-                String tgl_pesan = data.getString(Constant.TAG_CREATED_AT);
                 int harga = data.getInt(Constant.TAG_HARGA);
                 int jumlah = data.getInt(Constant.TAG_JUMLAH);
                 int total_harga = data.getInt(Constant.TAG_TOTAL_HARGA);
+
+                JSONObject created_at = data.getJSONObject(Constant.TAG_CREATED_AT);
+                String tgl_pesan = created_at.getString(Constant.TAG_DATE);
+
                 pesanan.setId_pesan(id_pesan);
                 pesanan.setNama_paket(nama_paket);
                 pesanan.setHarga(harga);
                 pesanan.setJumlah(jumlah);
                 pesanan.setTotal_harga(total_harga);
                 pesanan.setTgl_pesan(tgl_pesan);
+
                 pesanans.add(pesanan);
             }
             if(pesanans.size()>0){

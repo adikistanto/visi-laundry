@@ -116,7 +116,7 @@ public class DrawerActivity extends AppCompatActivity
     private void Paket(){
 
         RequestQueue rq = Volley.newRequestQueue(this);
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Constant.PAKET_URL,
+        StringRequest postRequest = new StringRequest(Request.Method.GET, Constant.PAKET_URL,
                 new Response.Listener<String>()
                 {
                     @Override

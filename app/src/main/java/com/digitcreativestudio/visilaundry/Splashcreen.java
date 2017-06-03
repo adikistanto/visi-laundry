@@ -67,7 +67,7 @@ public class Splashcreen extends AppCompatActivity {
     private void Paket(){
 
         RequestQueue rq = Volley.newRequestQueue(this);
-        StringRequest postRequest = new StringRequest(Request.Method.POST, Constant.PAKET_URL,
+        StringRequest postRequest = new StringRequest(Request.Method.GET, Constant.PAKET_URL,
                 new Response.Listener<String>()
                 {
                     @Override
@@ -75,7 +75,7 @@ public class Splashcreen extends AppCompatActivity {
                         try {
                             parseJSON(response);
                         }catch (JSONException e){
-                            Utils.createAlertDialog(Splashcreen.this,"Load Data Gagal","Load data gagal silahkan persiksa koneksi internet",false);
+                            Utils.createAlertDialog(Splashcreen.this,"Load Data Gagal","Load data gagal silahkan periksa koneksi internet",false);
                             progressBar.setVisibility(GONE);
                             e.printStackTrace();
                         }
@@ -85,7 +85,7 @@ public class Splashcreen extends AppCompatActivity {
                 {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Utils.createAlertDialog(Splashcreen.this,"Load Data Gagal","Load data gagal silahkan persiksa koneksi internet",false);
+                        Utils.createAlertDialog(Splashcreen.this,"Load Data Gagal","Load data gagal silahkan periksa koneksi internet",false);
                         progressBar.setVisibility(GONE);
                     }
                 }
